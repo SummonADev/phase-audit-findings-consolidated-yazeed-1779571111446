@@ -1,18 +1,21 @@
+import { ReactNode } from 'react';
+import clsx from 'clsx';
 import styles from './SectionHeader.module.css';
 
 type Props = {
-  eyebrow?: string;
-  title: string;
-  sub?: string;
-  align?: 'start' | 'center';
+  title: ReactNode;
+  subtitle?: ReactNode;
+  eyebrow?: ReactNode;
+  align?: 'left' | 'center';
+  className?: string;
 };
 
-export default function SectionHeader({ eyebrow, title, sub, align = 'start' }: Props) {
+export default function SectionHeader({ title, subtitle, eyebrow, align = 'left', className }: Props) {
   return (
-    <div className={styles.wrap} data-align={align}>
-      {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
+    <div className={clsx(styles.header, align === 'center' && styles.center, className)}>
+      {eyebrow && <div className={styles.eyebrow}>{eyebrow}</div>}
       <h2 className={styles.title}>{title}</h2>
-      {sub ? <p className={styles.sub}>{sub}</p> : null}
+      {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
     </div>
   );
 }
