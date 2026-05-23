@@ -1,32 +1,25 @@
 .card {
   background: var(--surface);
+  border: 1px solid var(--hairline);
   border-radius: var(--r-lg);
-  padding: 28px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  transition: transform 0.18s ease, background 0.18s ease;
+  gap: 8px;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
 .card:hover {
-  background: #161e1c;
+  border-color: rgba(34, 227, 154, 0.2);
+  transform: translateY(-2px);
 }
 
 .elevated {
   background: var(--surface-elevated);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .accent {
-  background: linear-gradient(135deg, rgba(34, 227, 154, 0.12), rgba(16, 185, 129, 0.04));
-  position: relative;
-  overflow: hidden;
-}
-
-.accent::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 0%, rgba(34, 227, 154, 0.18), transparent 50%);
-  pointer-events: none;
+  border-color: rgba(34, 227, 154, 0.3);
+  background: linear-gradient(135deg, rgba(34, 227, 154, 0.07), rgba(16, 185, 129, 0.02));
 }

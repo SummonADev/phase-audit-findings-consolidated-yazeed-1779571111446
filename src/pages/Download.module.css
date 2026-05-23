@@ -1,0 +1,118 @@
+.hero {
+  padding: 96px 0 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 10%, rgba(34, 227, 154, 0.10), transparent 50%);
+  pointer-events: none;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 60px);
+  line-height: 1.07;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 16px;
+  max-width: 700px;
+}
+
+.sub {
+  font-size: clamp(15px, 1.4vw, 18px);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-top: 12px;
+}
+
+.ctaRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.cardBody {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.comingSoon {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(34, 227, 154, 0.1);
+  border: 1px solid rgba(34, 227, 154, 0.2);
+  border-radius: var(--r-pill);
+  padding: 4px 12px;
+  font-weight: 600;
+}
+
+.emailBox {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: rgba(34, 227, 154, 0.06);
+  border: 1px solid rgba(34, 227, 154, 0.15);
+  border-radius: var(--r-lg);
+  padding: 32px;
+}
+
+@media (max-width: 640px) {
+  .emailBox {
+    flex-direction: column;
+  }
+}
+
+.emailTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.emailBody {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.emailLink {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.emailLink:hover {
+  opacity: 0.8;
+}

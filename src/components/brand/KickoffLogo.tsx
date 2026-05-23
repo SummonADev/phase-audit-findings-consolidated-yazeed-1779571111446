@@ -1,22 +1,27 @@
 type Props = {
   size?: number;
-  color?: string;
+  className?: string;
 };
 
-export default function KickoffLogo({ size = 32, color = '#22E39A' }: Props) {
+export default function KickoffLogo({ size = 32, className }: Props) {
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 64 64"
+      viewBox="0 0 32 32"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
       aria-hidden="true"
-      role="img"
     >
-      <circle cx="32" cy="32" r="5.5" fill={color} />
-      <circle cx="32" cy="32" r="12" fill="none" stroke={color} strokeWidth="2" opacity="0.75" />
-      <circle cx="32" cy="32" r="19" fill="none" stroke={color} strokeWidth="1.5" opacity="0.45" />
-      <circle cx="32" cy="32" r="26" fill="none" stroke={color} strokeWidth="1" opacity="0.22" />
+      <rect width="32" height="32" rx="8" fill="#22E39A" />
+      <path
+        d="M9 8L9 24M9 16L16 10M9 16L16 22M16 10L23 16M16 22L23 16"
+        stroke="#000"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }

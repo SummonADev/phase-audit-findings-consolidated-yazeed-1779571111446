@@ -1,30 +1,25 @@
-.pill,
-.accent {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 12px;
+.pill {
+  display: inline-block;
+  padding: 4px 12px;
   border-radius: var(--r-pill);
-  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--hairline);
+}
+
+.accent {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
   font-size: 11px;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-weight: 500;
-}
-
-.pill {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-secondary);
-}
-
-.accent {
-  background: rgba(34, 227, 154, 0.12);
+  font-family: var(--font-mono);
+  background: rgba(34, 227, 154, 0.1);
   color: var(--accent);
-}
-
-html[dir='rtl'] .pill,
-html[dir='rtl'] .accent {
-  font-family: var(--font-body);
-  letter-spacing: 0;
-  text-transform: none;
-  font-size: 12px;
+  border: 1px solid rgba(34, 227, 154, 0.2);
 }

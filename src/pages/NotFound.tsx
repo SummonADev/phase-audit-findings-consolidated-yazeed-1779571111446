@@ -1,14 +1,19 @@
 import Section from '@/components/ui/Section';
-import SectionHeader from '@/components/ui/SectionHeader';
 import Button from '@/components/ui/Button';
 import { useLocale } from '@/hooks/useLocale';
+import styles from './NotFound.module.css';
 
 export default function NotFound() {
   const { t } = useLocale();
+
   return (
     <Section>
-      <SectionHeader title={t('notFound.title')} subtitle={t('notFound.subtitle')} />
-      <Button to="/">{t('notFound.cta')}</Button>
+      <div className={styles.wrap}>
+        <div className={styles.code}>404</div>
+        <h1 className={styles.title}>{t('404.title')}</h1>
+        <p className={styles.sub}>{t('404.sub')}</p>
+        <Button to="/">{t('404.cta')}</Button>
+      </div>
     </Section>
   );
 }
