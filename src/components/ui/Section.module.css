@@ -1,0 +1,16 @@
+.section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.muted {
+  background: var(--surface-2);
+}
+
+.panel {
+  background: var(--surface);
+}
+
+@media (max-width: 720px) {
+  .section { padding: 56px 0; }
+}

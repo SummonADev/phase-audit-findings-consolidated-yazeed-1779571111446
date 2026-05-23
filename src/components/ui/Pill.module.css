@@ -1,0 +1,30 @@
+.pill,
+.accent {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.pill {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+.accent {
+  background: rgba(34, 227, 154, 0.12);
+  color: var(--accent);
+}
+
+html[dir='rtl'] .pill,
+html[dir='rtl'] .accent {
+  font-family: var(--font-body);
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 12px;
+}

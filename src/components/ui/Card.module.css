@@ -1,0 +1,32 @@
+.card {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.card:hover {
+  background: #161e1c;
+}
+
+.elevated {
+  background: var(--surface-elevated);
+}
+
+.accent {
+  background: linear-gradient(135deg, rgba(34, 227, 154, 0.12), rgba(16, 185, 129, 0.04));
+  position: relative;
+  overflow: hidden;
+}
+
+.accent::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(34, 227, 154, 0.18), transparent 50%);
+  pointer-events: none;
+}
